@@ -93,3 +93,8 @@ spring.cloud.vault.token=554f08c1-3532-f71d-3ce1-da5ea05c1d47
 spring.cloud.consul.discovery.acl-token=b1gs33cr3t
 
 ```
+- run the application and you should see the value in the property 'foo' in the variable mykey printed out.
+```java
+@Value("${foo}")
+String mykey; // wi	ll have value bar
+```
