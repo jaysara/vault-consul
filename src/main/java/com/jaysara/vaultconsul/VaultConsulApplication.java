@@ -1,4 +1,4 @@
-package com.allstate.compozed.vaultconsul;
+package com.jaysara.vaultconsul;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,8 +9,6 @@ import org.springframework.cloud.bootstrap.config.PropertySourceBootstrapPropert
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.consul.ConsulAutoConfiguration;
 import org.springframework.cloud.consul.discovery.ConsulDiscoveryProperties;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.vault.annotation.VaultPropertySource;
 import org.springframework.vault.core.VaultOperations;
 import org.springframework.vault.core.VaultTemplate;
 import org.springframework.vault.support.VaultResponse;
