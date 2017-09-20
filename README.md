@@ -2,9 +2,9 @@
 
 
 
-This application demonstrates how SpringBoot can be used to access the secrets stored in the Vault with consul backend. Vault is a Harshicorp product that provides variety of functionalities to store the important fields like databse password, api-keys etc in encrypted format that is easy to manage is secured in the cloud environment. 
+This application demonstrates how SpringBoot can be used to access the secrets stored in the Vault with consul backend. Vault is a Harshicorp product that provides variety of functionalities to store the sensitive data like databse password, api-keys etc in encrypted format. Vault makes it easy to manage them securely in the cloud environment. 
 
-In this project, I have configured Vault to use Consul as the backend. Please follow the steps below on how to achieve this.
+In typical architecture, Vault will have a backend like consul,aws or any database where it will store its secret. In this project, I have configured Vault to use Consul as the backend. Please follow the steps below on how to achieve this.
 
 #### Install Vault
   
