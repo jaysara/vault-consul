@@ -79,3 +79,17 @@ lease_duration  3600
 token           973a31ea-1ec4-c2de-0f63-623f477c2510
 ```
 * We should use this token in the application to read the values from Consul.
+* However for this application to read the value from vault, we need to insert a value in the consul. Spring always reads the value from 'config' folder in consul. So, we need to put a value using `acl-master-token' (b1gs33cr3t  - in this example).  Type following,
+
+```
+$ curl -X PUT -d 'test' 127.0.0.1:8500/v1/kv/config/my-spring-boot-app/foo?token=b1gs33cr3t
+```
+- Now update the acl-token property of sprint with the on that vault generated in the previous step. Make sure following properties have the right values.
+``` 
+spring.cloud.consul.config.acl-token=973a31ea-1ec4-c2de-0f63-623f477c2510 
+#Vault token is required for Spring to start communicating with Vault.
+spring.cloud.vault.token=554f08c1-3532-f71d-3ce1-da5ea05c1d47 
+#To discover a service, higher level - master token is needed.
+spring.cloud.consul.discovery.acl-token=b1gs33cr3t
+
+```
